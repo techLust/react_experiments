@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./main.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        float: right;
+        z-index: 9999;
+        color: white;
+        background-color: white;
+        border: 1px solid red;
+        position: absolute;
+        right: 100px;
+        top: 50px;
+      "
+    >
+      <div>
+        <button id="zoom-in">Zoom in</button>
+        <button id="zoom-out">Zoom out</button>
+        <button id="initial-position">Reset</button>
+      </div>
+      <div>
+        <button id="side1">side 1</button>
+        <button id="side2">side 2</button>
+        <button id="side3">side 3</button>
+        <button id="side4">side 4</button>
+      </div>
+    </div>
+  </body>
+</html>
