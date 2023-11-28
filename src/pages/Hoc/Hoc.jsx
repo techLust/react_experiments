@@ -1,13 +1,15 @@
 import React from 'react'
-import EnhancedComponent from '../../components/HocComponent/HocComponent'
+import withLoader from '../../components/HocComponent/Loader'
+import User from '../../components/User/User'
+
 
 const Hoc = () => {
     return (
         <>
-            <EnhancedComponent message='Hello from enhanced component'/>
+            <EnhancedComponent />
         </>
     )
-
 }
 
+const EnhancedComponent = withLoader(User)
 export default Hoc
