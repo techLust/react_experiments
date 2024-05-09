@@ -1,0 +1,24 @@
+.exp_container{
+    /* height: 400px; */
+    width: 500px;
+    border: 1px solid black;
+    /* display: flex; */
+    display: grid;
+    /* justify-content: space-around; */
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: black;
+
+}
+.check_item{
+    padding: 15px;
+}
+
+.swap_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    filter: invert(100);
+}

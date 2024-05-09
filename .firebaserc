@@ -1,9 +1,0 @@
-{
-  "projects": {
-    "default": "analytics-exp-ad40b",
-    "test": "analytics-test-a5d77",
-    "exp": "analytics-exp-ad40b"
-  },
-  "targets": {},
-  "etags": {}
-}

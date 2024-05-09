@@ -1,21 +1,26 @@
-import React from 'react'
-import useSendData from '../../customHooks/useSendData'
-import useApiCall from '../../customHooks/useApiCall'
+import React from "react";
+import useSendData from "../../customHooks/useSendData";
+import useApiCall from "../../customHooks/useApiCall";
 
-const path = 'https://jsonplaceholder.typicode.com/todos/1'
-const method = 'GET'
+const path = "https://jsonplaceholder.typicode.com/todos/1";
+const method = "GET";
 
 const HookExp = () => {
-    // const [data] = useSendData()
-    // console.log('Data from useSendData', data)
+  // const [data] = useSendData()
+  // console.log('Data from useSendData', data)
 
-    const [data, error] = useApiCall(path, method)
+  const [data, error] = useApiCall(path, method);
 
-    console.log('data from custom hook', data)
+  console.log("Data", data);
 
-    return (
-        <div>HookExp</div>
-    )
-}
+  const htmlContent = ` <h2> Rendered HTML from outside</h2>`;
 
-export default HookExp
+  return (
+    <div>
+      <div>HookExp</div>
+      <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+    </div>
+  );
+};
+
+export default HookExp;

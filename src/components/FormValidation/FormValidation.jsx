@@ -3,7 +3,6 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-
 const schema = yup.object().shape({
     firstName: yup.string().required('First name is required'),
     lastName: yup.string().required('Last name is required'),
@@ -11,22 +10,12 @@ const schema = yup.object().shape({
     age: yup.number().positive('Age must be a positive number').required('Age is required'),
 });
 
-
-
 const FormValidation = () => {
-
-    const {
-        control,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
-        resolver: yupResolver(schema),
-    });
+    const { control, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(schema)});
 
     const onSubmit = (data) => {
         console.log(data);
     };
-
 
     return (
         <div>

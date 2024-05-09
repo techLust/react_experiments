@@ -21,6 +21,7 @@ const User = (props) => {
 
             <input type='text' name='address' value={input.address} onChange={inputHandlar} />
             <button type='button' onClick={showInput}>Show</button>
+            <button>Login with Google</button>
         </div>
     )
 }
