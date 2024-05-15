@@ -13,10 +13,11 @@ import Hoc from './pages/Hoc/Hoc';
 import ClassPage from './pages/ClassPage/ClassPage';
 import Login from './pages/Login/Login';
 import FirebaseCrud from './pages/FirebaseCrud';
-import Exp from './components/ReactExp/Exp';
+import Exp from './components/RefreshToken/Exp';
 import AuthGuard from './guard/AuthGuard';
 import StorageExp from './components/StorageExp';
 import TestCustomReducer from './components/TestCustomReducer';
+import GraphQlExp from './components/graphQlExp';
 
 function App() {
   const { cartItems } = useSelector(store => store.cart);
@@ -43,7 +44,8 @@ function App() {
           <Route path="/firebase" element={<FirebaseCrud />} />
           <Route path="/storage" element={<StorageExp />} />
           <Route path="/exp" element={<AuthGuard component={Exp} />} />
-          <Route path='/testred' element={<TestCustomReducer />} />
+          <Route path="/customReducer" element={<TestCustomReducer />} />
+          <Route path="/graphQl" element={<GraphQlExp />} />
         </Routes>
       </BrowserRouter>
     </div>
